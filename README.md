@@ -53,7 +53,7 @@ weather-dashboard-app/
    ```sh
    git clone https://github.com/SriPriyanD07/Weather_report.git
 
-   cd weather-dashboard-app
+   cd Weather_report
    ```
 2. **Install dependencies:**
    - Client:
