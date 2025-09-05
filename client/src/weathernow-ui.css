@@ -1,0 +1,204 @@
+/* WeatherNow UI - Modern, clean, card-based, black/white theme */
+body {
+  background: #f5f6f7;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+}
+
+.app-main-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0001;
+  max-width: 820px;
+  margin: 32px auto;
+  padding: 0 0 32px 0;
+  overflow: hidden;
+}
+
+.header-bar {
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px 22px 32px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.header-bar h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.header-search {
+  background: #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  min-width: 220px;
+}
+.header-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  padding: 10px 8px;
+  width: 160px;
+  color: #222;
+}
+
+.layout-row {
+  display: flex;
+  gap: 32px;
+  margin: 32px 32px 0 32px;
+}
+
+.current-weather-card {
+  background: #232323;
+  color: #fff;
+  border-radius: 14px;
+  flex: 1.2;
+  padding: 32px 32px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 260px;
+  box-shadow: 0 2px 12px #0002;
+}
+.current-weather-card .temp-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+.current-weather-card .temp {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.current-weather-card .weather-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+.current-weather-card .desc {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.current-weather-card .meta {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 18px;
+}
+.current-weather-card .city {
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.visual-alerts-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #222;
+  padding: 18px 18px 10px 18px;
+  min-width: 220px;
+  max-width: 260px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: fit-content;
+}
+.visual-alert {
+  background: #f5f6f7;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.layout-row-forecast {
+  display: flex;
+  gap: 32px;
+  margin: 32px 32px 0 32px;
+}
+
+.forecast-section {
+  flex: 2;
+}
+.forecast-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  color: #222;
+}
+.forecast-cards {
+  display: flex;
+  gap: 18px;
+}
+.forecast-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px #0001;
+  padding: 18px 12px 14px 12px;
+  min-width: 90px;
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.forecast-card .day {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.forecast-card .icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+.forecast-card .temp {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.forecast-card .meta {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.map-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 0;
+  min-width: 220px;
+  max-width: 260px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+.map-card .map-label {
+  background: #111;
+  color: #fff;
+  border-radius: 18px;
+  padding: 4px 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px auto 10px auto;
+  display: inline-block;
+}
