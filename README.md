@@ -51,7 +51,8 @@ weather-dashboard-app/
 ### Installation
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/SriPriyanD07/Weather_report.git
+
    cd weather-dashboard-app
    ```
 2. **Install dependencies:**
