@@ -1,11 +1,12 @@
 # Weather Dashboard Application
 
-A modern, full-stack JavaScript web app for searching and visualizing current weather and 5-day forecasts for any city, using the OpenWeatherMap API. The app features a React-based UI, interactive map, search history, and a Node.js/Express backend for API requests.
+A modern, full-stack JavaScript web app for searching and visualizing current weather and 5-day forecasts for any city, using the OpenWeatherMap API. The app features a React-based UI, interactive map, search history, dynamic visual alerts, and a Node.js/Express backend for API requests.
 
 ---
 
 ## Features
 - **City Weather Search**: Enter a city to view its current weather and 5-day forecast.
+- **Visual Alerts**: Dynamic alerts (e.g., umbrella for rain, hydration for heat) based on weather conditions.
 - **Search History**: Clickable history of previous searches for quick access.
 - **Interactive Map**: Displays the searched city on a map with a custom animated marker.
 - **Responsive Dashboard**: Clean, modern UI with weather icons and forecast cards.
@@ -20,19 +21,21 @@ weather-dashboard-app/
 │   ├── public/
 │   │   └── index.html
 │   ├── src/
-│   │   ├── App.js              # Main React app
+│   │   ├── App.js                  # Main React app
 │   │   ├── components/
-│   │   │   ├── WeatherDisplay.js   # Shows current weather & forecast
-│   │   │   ├── WeatherMap.js      # Interactive city map
-│   │   │   └── SearchHistory.js   # Search history list
+│   │   │   ├── WeatherDisplay.js   # Shows current weather details
+│   │   │   ├── ForecastDisplay.js  # Shows 5-day weather forecast
+│   │   │   ├── VisualAlerts.js     # Displays weather-based tips/alerts
+│   │   │   ├── WeatherMap.js       # Interactive city map
+│   │   │   └── SearchHistory.js    # Search history list
 │   │   └── utils/
-│   │       └── api.js             # Client-side API calls
+│   │       └── api.js              # Client-side API calls
 │   └── package.json
 ├── server/
 │   ├── src/
-│   │   ├── index.js               # Express server entry
+│   │   ├── index.js                # Express server entry
 │   │   ├── routes/
-│   │   │   └── weather.js         # Weather API route
+│   │   │   └── weather.js          # Weather API route
 │   │   └── controllers/
 │   │       └── weatherController.js # Handles weather API logic
 │   └── package.json
@@ -52,9 +55,9 @@ weather-dashboard-app/
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/SriPriyanD07/Weather_report.git
-
    cd Weather_report
    ```
+
 2. **Install dependencies:**
    - Client:
      ```sh
@@ -66,6 +69,7 @@ weather-dashboard-app/
      cd ../server
      npm install
      ```
+
 3. **Set up environment variables:**
    - In `server/.env`, add:
      ```
@@ -98,7 +102,9 @@ weather-dashboard-app/
 ---
 
 ## Main Components (Client)
-- `WeatherDisplay.js`: Shows city name, country, current conditions, and a 5-day forecast with icons.
+- `WeatherDisplay.js`: Displays current city, temperature, humidity, wind, etc.
+- `ForecastDisplay.js`: Renders the 5-day weather forecast.
+- `VisualAlerts.js`: Shows contextual advice based on current weather (e.g., "Carry umbrella").
 - `WeatherMap.js`: Renders a map centered on the city with a custom emoji marker.
 - `SearchHistory.js`: Displays clickable history of searched cities.
 - `api.js`: Handles client-side API requests to the backend.

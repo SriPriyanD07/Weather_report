@@ -1,11 +1,15 @@
 const axios = require('axios');
-require('dotenv').config();
 
 const API_KEY = process.env.OPENWEATHER_API_KEY;
 
 // Returns both current weather and 5-day forecast for a city
 exports.getWeather = async (req, res) => {
     const { city } = req.query;
+
+    if (!API_KEY) {
+        return res.status(500).json({ error: 'API key is missing in server configuration.' });
+    }
+
     if (!city) {
         return res.status(400).json({ error: 'City parameter is required.' });
     }
@@ -24,11 +28,17 @@ exports.getWeather = async (req, res) => {
             forecast: forecastRes.data
         });
     } catch (error) {
-        console.error(error); // Log the error for debugging
-        if (error.response && error.response.status === 404) {
-            res.status(404).json({ error: 'City not found.' });
+        console.error('Weather API Error:', error.message);
+        if (error.response) {
+            // Forward the status code and message from OpenWeatherMap if possible
+            const status = error.response.status;
+            const message = error.response.data && error.response.data.message
+                ? error.response.data.message
+                : 'Failed to fetch weather data.';
+
+            res.status(status).json({ error: message });
         } else {
-            res.status(500).json({ error: 'Failed to fetch weather data.' });
+            res.status(500).json({ error: 'Internal server error while fetching weather data.' });
         }
     }
 };
